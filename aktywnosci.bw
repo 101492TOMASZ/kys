@@ -137,8 +137,8 @@ run;
 	begin
 		char Text1, Text2, Text3;
 		createAppWindow;
-		setAppWinTitle(" GOLF ");
-		Text1 := " WYBÓR ";
+		setAppWinTitle(" AKTYWNOSCI ");
+		Text1 := " WYBÓR AKTYWNOŒCI ";
 		Text2 := "System Ekspertowy.";
 		Text3 := "Informatyka, UKW";
 		vignette( Text1, Text2, Text3 );
@@ -179,7 +179,7 @@ run;
 	
 	createMenu( MenuGlowne );
 		createPopupMenu( Menu_1, "&Menu" );
-			appendMenu( Menu_1, "&Asystent wyjscia gry w golfa", asystent );
+			appendMenu( Menu_1, "&Asystent wyboru aktywnoœci", asystent );
 			appendMenu( Menu_1, separator, _ );
 			appendMenu( Menu_1, separator, _ );
 			appendMenu(Menu_1, "&Wyjscie z programu", wyjdz );
