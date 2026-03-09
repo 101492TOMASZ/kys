@@ -1,0 +1,201 @@
+//------------------------------------------------------------------------------
+//
+// èrÛd≥owa postaÊ aplikacji zapisanej w pliku:
+//  c:\users\tomas\desktop\kys\aktywnosci.bbw
+//
+//------------------------------------------------------------------------------
+
+knowledge base aktywnosci
+
+sources
+
+  baza_regu≥owa_003:
+    type kb
+    file "zrod003.zw";
+
+
+end; // sources
+
+facets
+
+  ask     yes;
+  single  yes;
+
+  typ_aktywnosci :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "kreatywna",
+        "rozrywkowa",
+        "spoleczna",
+        "sportowa",
+        "umyslowa"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\kreatywna.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\rozrywkowa.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\spoleczna.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\sportowa.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\umyslowa.bmp"
+     };
+
+  miejsce :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "w_domu",
+        "na_zewnatrz"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\wdomu.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\nazewnatrz.bmp"
+     };
+
+  towarzystwo :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "sam/sama",
+        "z_kims"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\samsama.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\z kims.bmp"
+     };
+
+  polecana_aktywnosc :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "bieganie",
+        "pilka nozna",
+        "trening domowy",
+        "zajecia fitness",
+        "czytanie w parku",
+        "nauka grupowa",
+        "programowanie",
+        "kurs online",
+        "fotografia",
+        "plener malarski",
+        "rysowanie",
+        "rekodzielo grupowe",
+        "spacer",
+        "kino",
+        "gra wideo",
+        "gra planszowa",
+        "wolontariat",
+        "spotkanie z przyjaciolmi",
+        "rozmowa telefoniczna",
+        "impreza domowa"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\bieganie.bmp",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+     };
+
+end; // facets
+
+control
+run;
+	
+// 	********************************** FUNKCJE*********************************
+
+	function wyjdz
+	begin
+		mainMenu;
+	end;
+
+	
+	//********************************** WINIETA **********************************
+	function winieta
+	begin
+		char Text1, Text2, Text3;
+		createAppWindow;
+		setAppWinTitle(" GOLF ");
+		Text1 := " WYB”R ";
+		Text2 := "System Ekspertowy.";
+		Text3 := "Informatyka, UKW";
+		vignette( Text1, Text2, Text3 );
+	end;
+	//**************************** FUNKCJA WNIOSKUJACA *************************
+	function solver ( char X, char Y, char Z, char P )
+	begin
+		solutionWin( Z );
+		delNewFacts;
+		setSysText ( problem, P);
+		getSource ( X );
+		goal ( Y );
+		freeSource ( X );
+	end;
+
+	function asystent
+	begin
+		solver ( "baza_regu≥owa_003", "polecana_aktywnosc = X", "yes", "[BWybÛr w zaleznosci od preferencji" );
+	end;
+
+//rozmiary okien
+
+	setWindowPos( picture_ask, 10, 70, 600, 450, 0);
+	setWindowPos( picture_solution, 10, 70, 600, 450, 0);
+
+	setWindowPos( ask, 700, 70, 200, 200, 0);
+	setWindowPos( solution, 700, 70, 200, 200, 0);
+	
+	setWindowPos( video_solution, 950, 70, 320, 240, 0);
+		
+	setWindowPos( what_is, 700, 410, 550, 100, 0); 	
+
+// 	*************************************** END FUNKCJE *******************************************
+	
+	winieta;
+	
+	int MenuGlowne, Menu_1, Menu_2, Menu_3, Menu_4;
+	
+	createMenu( MenuGlowne );
+		createPopupMenu( Menu_1, "&Menu" );
+			appendMenu( Menu_1, "&Asystent wyjscia gry w golfa", asystent );
+			appendMenu( Menu_1, separator, _ );
+			appendMenu( Menu_1, separator, _ );
+			appendMenu(Menu_1, "&Wyjscie z programu", wyjdz );
+		appendMenu ( MenuGlowne, menu, Menu_1);
+	
+		
+	appendMenu(MenuGlowne,menu,window);
+		
+		createPopupMenu( Menu_2, "&Pomoc" );
+			appendMenu( Menu_2, "&Informacje...", winieta );
+			
+		appendMenu ( MenuGlowne, menu, Menu_2 );
+	
+	fullMenu( MenuGlowne );
+
+end
+;
+
+end; // knowledge base

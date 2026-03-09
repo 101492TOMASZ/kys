@@ -1,0 +1,220 @@
+//------------------------------------------------------------------------------
+//
+// Tekst Ÿród³a zapisanego w pliku:
+//  zrod003.bzw
+//
+//------------------------------------------------------------------------------
+
+knowledge source baza_regu³owa_003
+
+facets
+
+  ask     yes;
+  single  yes;
+
+  typ_aktywnosci :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "kreatywna",
+        "rozrywkowa",
+        "spoleczna",
+        "sportowa",
+        "umyslowa"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\kreatywna.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\rozrywkowa.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\spoleczna.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\sportowa.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\umyslowa.bmp"
+     };
+
+  miejsce :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "w_domu",
+        "na_zewnatrz"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\wdomu.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\nazewnatrz.bmp"
+     };
+
+  towarzystwo :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "sam/sama",
+        "z_kims"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\samsama.bmp",
+        "c:\\users\\tomas\\desktop\\kys\\z kims.bmp"
+     };
+
+  polecana_aktywnosc :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "bieganie",
+        "pilka nozna",
+        "trening domowy",
+        "zajecia fitness",
+        "czytanie w parku",
+        "nauka grupowa",
+        "programowanie",
+        "kurs online",
+        "fotografia",
+        "plener malarski",
+        "rysowanie",
+        "rekodzielo grupowe",
+        "spacer",
+        "kino",
+        "gra wideo",
+        "gra planszowa",
+        "wolontariat",
+        "spotkanie z przyjaciolmi",
+        "rozmowa telefoniczna",
+        "impreza domowa"
+     }
+     picture
+     {
+        "c:\\users\\tomas\\desktop\\kys\\bieganie.bmp",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+     };
+
+end; // facets
+
+rules
+
+   1001: polecana_aktywnosc = "bieganie" if
+             typ_aktywnosci = "sportowa" 
+             & miejsce = "na_zewnatrz" 
+             & towarzystwo = "sam/sama";
+
+   1002: polecana_aktywnosc = "pilka nozna" if
+             typ_aktywnosci = "sportowa" 
+             & miejsce = "na_zewnatrz" 
+             & towarzystwo = "z_kims";
+
+   1003: polecana_aktywnosc = "trening domowy" if
+             typ_aktywnosci = "sportowa" 
+             & towarzystwo = "sam/sama" 
+             & miejsce = "w_domu";
+
+   1004: polecana_aktywnosc = "zajecia fitness" if
+             typ_aktywnosci = "sportowa" 
+             & miejsce = "w_domu" 
+             & towarzystwo = "z_kims";
+
+   1005: polecana_aktywnosc = "czytanie w parku" if
+             typ_aktywnosci = "umyslowa" 
+             & miejsce = "na_zewnatrz" 
+             & towarzystwo = "sam/sama";
+
+   1006: polecana_aktywnosc = "nauka grupowa" if
+             miejsce = "na_zewnatrz" 
+             & towarzystwo = "z_kims" 
+             & typ_aktywnosci = "umyslowa";
+
+   1007: polecana_aktywnosc = "programowanie" if
+             miejsce = "w_domu" 
+             & towarzystwo = "sam/sama" 
+             & typ_aktywnosci = "umyslowa";
+
+   1008: polecana_aktywnosc = "kurs online" if
+             miejsce = "w_domu" 
+             & towarzystwo = "z_kims" 
+             & typ_aktywnosci = "umyslowa";
+
+   1009: polecana_aktywnosc = "fotografia" if
+             miejsce = "na_zewnatrz" 
+             & typ_aktywnosci = "kreatywna" 
+             & towarzystwo = "sam/sama";
+
+   1010: polecana_aktywnosc = "plener malarski" if
+             miejsce = "na_zewnatrz" 
+             & towarzystwo = "z_kims" 
+             & typ_aktywnosci = "kreatywna";
+
+   1011: polecana_aktywnosc = "rysowanie" if
+             miejsce = "w_domu" 
+             & towarzystwo = "sam/sama" 
+             & typ_aktywnosci = "kreatywna";
+
+   1012: polecana_aktywnosc = "rekodzielo grupowe" if
+             miejsce = "w_domu" 
+             & typ_aktywnosci = "kreatywna" 
+             & towarzystwo = "z_kims";
+
+   1013: polecana_aktywnosc = "spacer" if
+             miejsce = "na_zewnatrz" 
+             & typ_aktywnosci = "rozrywkowa" 
+             & towarzystwo = "sam/sama";
+
+   1014: polecana_aktywnosc = "kino" if
+             miejsce = "na_zewnatrz" 
+             & typ_aktywnosci = "rozrywkowa" 
+             & towarzystwo = "z_kims";
+
+   1015: polecana_aktywnosc = "gra wideo" if
+             typ_aktywnosci = "rozrywkowa" 
+             & miejsce = "w_domu" 
+             & towarzystwo = "sam/sama";
+
+   1016: polecana_aktywnosc = "gra planszowa" if
+             miejsce = "w_domu" 
+             & typ_aktywnosci = "rozrywkowa" 
+             & towarzystwo = "z_kims";
+
+   1017: polecana_aktywnosc = "wolontariat" if
+             miejsce = "na_zewnatrz" 
+             & typ_aktywnosci = "spoleczna" 
+             & towarzystwo = "sam/sama";
+
+   1018: polecana_aktywnosc = "spotkanie z przyjaciolmi" if
+             miejsce = "na_zewnatrz" 
+             & towarzystwo = "z_kims" 
+             & typ_aktywnosci = "spoleczna";
+
+   1019: polecana_aktywnosc = "rozmowa telefoniczna" if
+             miejsce = "w_domu" 
+             & towarzystwo = "sam/sama" 
+             & typ_aktywnosci = "spoleczna";
+
+   1020: polecana_aktywnosc = "impreza domowa" if
+             miejsce = "w_domu" 
+             & typ_aktywnosci = "spoleczna" 
+             & towarzystwo = "z_kims";
+
+
+end; // rules
+
+end; // knowledge source
