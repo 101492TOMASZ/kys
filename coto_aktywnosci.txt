@@ -1,0 +1,58 @@
+##typ_aktywnosci = kreatywna
+Kreatywna aktywnosc rozwija wyobraznie i pozwala tworzyc cos nowego.
+##typ_aktywnosci = rozrywkowa
+Rozrywkowa aktywnosc daje luz, przyjemnosc i szybkie oderwanie od codziennosci.
+##typ_aktywnosci = spoleczna
+Spoleczna aktywnosc koncentruje sie na relacjach, kontakcie i wspolnym czasie.
+##typ_aktywnosci = sportowa
+Sportowa aktywnosc poprawia kondycje, zdrowie i poziom energii.
+##typ_aktywnosci = umyslowa
+Umyslowa aktywnosc pobudza myslenie, koncentracje i zdobywanie wiedzy.
+##miejsce = w_domu
+W domu oznacza komfortowe warunki, prywatnosc i latwy dostep do potrzebnych rzeczy.
+##miejsce = na_zewnatrz
+Na zewnatrz to swieze powietrze, ruch i kontakt z otoczeniem.
+##towarzystwo = sam/sama
+Sam/sama to pelna niezaleznosc, wlasne tempo i spokojne skupienie.
+##towarzystwo = z_kims
+Z kims oznacza wspolne dzialanie, motywacje i dzielenie emocji.
+##polecana_aktywnosc = bieganie
+Bieganie to prosty i skuteczny sposob na poprawienie kondycji oraz rozladowanie napiecia.
+##polecana_aktywnosc = pilka nozna
+Pilka nozna laczy ruch, rywalizacje i wspolprace w dynamicznej grze zespolowej.
+##polecana_aktywnosc = trening domowy
+Trening domowy pozwala cwiczyc regularnie bez wychodzenia z domu.
+##polecana_aktywnosc = zajecia fitness
+Zajecia fitness daja energie, rytm i dodatkowa motywacje do aktywnosci.
+##polecana_aktywnosc = czytanie w parku
+Czytanie w parku laczy relaks z rozwojem i spokojem na swiezym powietrzu.
+##polecana_aktywnosc = nauka grupowa
+Nauka grupowa ulatwia zrozumienie tematow dzieki wymianie wiedzy i pomyslow.
+##polecana_aktywnosc = programowanie
+Programowanie rozwija logiczne myslenie i daje satysfakcje z rozwiazywania problemow.
+##polecana_aktywnosc = kurs online
+Kurs online to elastyczna forma nauki, ktora latwo dopasowac do dnia.
+##polecana_aktywnosc = fotografia
+Fotografia uczy uwaznosci i pozwala zatrzymac ciekawe chwile.
+##polecana_aktywnosc = plener malarski
+Plener malarski laczy tworcze dzialanie z inspiracja plynaca z natury.
+##polecana_aktywnosc = rysowanie
+Rysowanie pomaga wyciszyc sie i wyrazic pomysly w wizualnej formie.
+##polecana_aktywnosc = rekodzielo grupowe
+Rekodzielo grupowe daje satysfakcje z tworzenia i wzmacnia wspolprace.
+##polecana_aktywnosc = spacer
+Spacer to lekka forma ruchu, ktora poprawia samopoczucie i oczyszcza glowe.
+##polecana_aktywnosc = kino
+Kino zapewnia rozrywke i wspolne emocje podczas seansu.
+##polecana_aktywnosc = gra wideo
+Gra wideo dostarcza zabawy, wyzwan i szybkiej rozrywki.
+##polecana_aktywnosc = gra planszowa
+Gra planszowa integruje, uczy strategii i daje duzo radosci we wspolnym graniu.
+##polecana_aktywnosc = wolontariat
+Wolontariat pozwala pomagac innym i budowac poczucie sprawczosci.
+##polecana_aktywnosc = spotkanie z przyjaciolmi
+Spotkanie z przyjaciolmi wzmacnia relacje i poprawia nastroj.
+##polecana_aktywnosc = rozmowa telefoniczna
+Rozmowa telefoniczna pozwala utrzymac kontakt i wsparcie bez wychodzenia z domu.
+##polecana_aktywnosc = impreza domowa
+Impreza domowa tworzy swobodna atmosfere i okazje do wspolnej zabawy.

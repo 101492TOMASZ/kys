@@ -13,6 +13,14 @@ sources
     type kb
     file "zrod003.zw";
 
+  baza_metafor_002:
+    type metaphors
+    file "meta002.dbm";
+
+  wyjaœnienia_coto_001:
+    type what_is_file
+    file "coto001.dbw";
+
 
 end; // sources
 
